@@ -1,0 +1,28 @@
+GET http://localhost:3000/movies
+
+############# CREAR PELICULA
+POST http://localhost:3000/movies
+Content-Type:  application/json
+
+  {
+    "sql" : "select * from users",
+    "title": "Pelicula test 5",
+    "year": 1993,
+    "director": "Steven Spielberg",
+    "duration": 127,
+    "poster": "https://vice-press.com/cdn/shop/products/Jurassic-Park-Editions-poster-florey.jpg?v=1654518755&width=1024",
+    "genre": ["Adventure", "Sci-Fi"]
+   
+  }
+
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2020
+}
+
+### Actualizar una película
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
